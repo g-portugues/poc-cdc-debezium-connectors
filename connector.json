@@ -1,0 +1,23 @@
+{
+    "name": "mydatabaseINDEX-connector",
+    "config": {
+      "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+      "tasks.max": "1",
+      "database.hostname": "mysql",
+      "database.port": "3306",
+      "database.user": "dbuser",
+      "database.password": "dbpassword",
+      "database.server.id": "INDEX",
+      "database.server.name": "mydatabaseINDEX",
+      "database.whitelist": "mydatabaseINDEX",
+      "database.history.kafka.bootstrap.servers": "kafka:9092",
+      "database.history.kafka.topic": "schema-changes.mydatabase",
+      "database.history.kafka.recovery.poll.interval.ms": "1000",
+      "include.schema.changes": "false",
+      "sslmode": "disabled",
+      "topic.prefix": "superlogica",
+      "table.include.list": "mydatabaseINDEX.auditoria",
+      "schema.history.internal.kafka.bootstrap.servers": "kafka:29092",
+      "schema.history.internal.kafka.topic": "schemahistory.fullfillmentINDEX"
+    }
+}
